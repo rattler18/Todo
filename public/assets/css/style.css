@@ -1,0 +1,41 @@
+body{
+    color: gainsboro;
+    font-size: 22px;
+    letter-spacing: 2px;
+}
+ul{
+    list-style-type: none;
+    padding: 0px;
+    width: 400px;
+    margin: 0;
+}
+#todo-table{
+    margin: 0 auto;
+    width:  410px;
+    background-color: rgba(8, 12, 14, 0.767);
+    height: auto;
+    padding: 10px;
+    border-radius: 5px;
+    display: block;
+}
+input{
+    float: left;
+    height: 40px;
+    width: 300px;
+    font-size: 1rem;
+}
+button{
+    width: 95px;
+    height: 46px;
+    font-size: 1rem;
+    margin: 0 0 0 10px;
+}
+
+ul li{
+    padding: 5px;
+}
+ul li:hover{
+    cursor: pointer;
+    text-decoration: white line-through;
+    background-color: rgb(20, 22, 27);
+}
