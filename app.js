@@ -8,6 +8,8 @@ app.use(express.urlencoded({
 }));
 
 app.use(cors());
+console.log(__dirname);
+console.log(__filename);
 
 app.set('view engine','ejs').set('view options',{
     delimiter:'[]'
@@ -15,6 +17,10 @@ app.set('view engine','ejs').set('view options',{
 
 todoController(app);
 
-app.listen(3000, ()=>{
-    console.log("Server Started on Port 3000");
+let port =  process.env.PORT;
+//port = 3000;
+if(port == null || port == '') port = 8000;
+
+app.listen(port, ()=>{
+    console.log(`Server Started on Port ${port}`);
 });

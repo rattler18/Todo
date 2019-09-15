@@ -12,6 +12,7 @@ export default (app)=>{
 
     app.post('/todo', (req, res, next) => {
         req.on('data',(chunk)=>{
+            console.log(chunk.toString());
             const todo = new Todo({
                     item: chunk.toString()
                 });
