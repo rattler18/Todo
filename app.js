@@ -21,7 +21,7 @@ app.set('view engine','ejs').set('view options',{
 todoController(app);
 
 let port =  process.env.PORT;
-port = 3000;
+
 if(port == null || port == '') port = 8000;
 
 app.listen(port, ()=>{
