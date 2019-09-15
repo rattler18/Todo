@@ -19,6 +19,7 @@
     "passport": "^0.4.0"
   },
   "devDependencies": {
+    "esm": "^3.2.25",
     "mocha": "^6.1.4"
   },
   "scripts": {
@@ -30,7 +31,7 @@
     "url": "rattler18"
   },
   "engines": {
-      "node":"^10.0.0"
+    "node": "^10.0.0"
   },
   "keywords": [
     "yeahs"
