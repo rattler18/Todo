@@ -1,8 +1,11 @@
-import mongoose from 'mongoose';
+// import mongoose from 'mongoose';
+const mongoose = require('mongoose');
 
 //Connect to the database
 // mongoose.connect('mongodb://localhost/todo');
-mongoose.connect('mongodb+srv://owofete:owofete100@rogueone-ar3wg.mongodb.net/test?retryWrites=true&w=majority');
+mongoose.connect('mongodb+srv://owofete:owofete100@rogueone-ar3wg.mongodb.net/test?retryWrites=true&w=majority',{
+    useNewUrlParser:true
+});
 //Check if the Connection was created Successfully
 const db = mongoose.connection;
 db.on('err', console.error.bind(console, 'This Error Occurred : '));
@@ -16,4 +19,5 @@ const todoSchema = mongoose.Schema({
 
 const Todo = mongoose.model('Todo',todoSchema);
 
-export default Todo;
+//export default Todo;
+module.exports = Todo

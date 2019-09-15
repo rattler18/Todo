@@ -1,6 +1,7 @@
-import Todo from '../model/todo';
+//import Todo from '../model/todo';
+const Todo = require('../model/todo');
 
-export default (app)=>{
+module.exports = (app)=>{
     app.get('/todo', (req, res, next) => {
         Todo.find({}, (err, Data) => {
             if (err) return console.error.bind(console, 'This Read Error Occurred : ');
