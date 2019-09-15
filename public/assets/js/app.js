@@ -6,7 +6,7 @@ button.addEventListener('click',(event)=>{
 
 const spartan = async (input) => {
     try{
-        await fetch('https://mytodox.herokuapp.com/', {
+        await fetch('https://mytodox.herokuapp.com/todo', {
             method: 'POST',
             body: input.value
         });
@@ -27,7 +27,7 @@ list.forEach((elem)=>{
 
 const trojan = async (input) => {
     try {
-        await fetch(`https://mytodox.herokuapp.com/${input.innerText}`, {
+        await fetch(`https://mytodox.herokuapp.com/todo/${input.innerText}`, {
             method: 'DELETE',
             body: input.innerText
         });
