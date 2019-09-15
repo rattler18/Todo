@@ -3,8 +3,9 @@ const mongoose = require('mongoose');
 
 //Connect to the database
 // mongoose.connect('mongodb://localhost/todo');
-mongoose.connect('mongodb+srv://owofete:owofete100@rogueone-ar3wg.mongodb.net/test?retryWrites=true&w=majority',{
-    useNewUrlParser:true
+mongoose.connect('mongodb+srv://owofete:owofete100@cluster0-ar3wg.mongodb.net/test?retryWrites=true&w=majority',{
+    useNewUrlParser:true,
+    useUnifiedTopology:true
 });
 //Check if the Connection was created Successfully
 const db = mongoose.connection;
