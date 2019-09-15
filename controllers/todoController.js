@@ -2,7 +2,7 @@
 const Todo = require('../model/todo');
 
 module.exports = (app)=>{
-    app.get('/todo', (req, res, next) => {
+    app.get('/', (req, res, next) => {
         Todo.find({}, (err, Data) => {
             if (err) return console.error.bind(console, 'This Read Error Occurred : ');
             res.render('todo', {
